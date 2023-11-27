@@ -9,4 +9,3 @@ RUN adduser -S user  -G root
 USER user
 WORKDIR /home/user
 CMD ["sh", "-c", "tail -f /dev/null"]
-RUN chmod 777 /etc/hosts
