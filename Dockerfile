@@ -5,7 +5,7 @@ MAINTAINER FT
 RUN set -eux; \
     apk add --update --no-cache \
         openldap-clients
-
+RUN chmod 777 /etc/hosts
 RUN adduser -S user  -G root
 USER user
 WORKDIR /home/user
