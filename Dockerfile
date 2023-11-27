@@ -5,10 +5,8 @@ MAINTAINER FT
 RUN set -eux; \
     apk add --update --no-cache \
         openldap-clients
-RUN chmod 777 /etc/hosts
-RUN echo '172.17.193.240 ldapds.lfpw.aviation-civile.gouv.fr'>>/etc/hosts
 RUN adduser -S user  -G root
 USER user
 WORKDIR /home/user
-
 CMD ["sh", "-c", "tail -f /dev/null"]
+RUN chmod 777 /etc/hosts
